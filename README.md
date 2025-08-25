@@ -1,8 +1,8 @@
 # java
 
 ## 조건문
-- [if-else]
-- [switch]
+- [if-else](src/conditional/ifelse/README.md)
+- [switch](src/conditional/switch/README.md)
 
 ## 반복문
 - [for]
