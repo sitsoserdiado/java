@@ -5,8 +5,7 @@
 - [switch](src/conditional/switch/README.md)
 
 ## 반복문
-- [for]
-- [while]
+- [for, while](src/loop/README.md)
 
 ## 배열
 - [배열]
