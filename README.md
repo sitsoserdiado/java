@@ -8,9 +8,7 @@
 - [for, while](src/loop/README.md)
 
 ## 배열
-- [배열]
-- [2차원배열]
-- [ArrayList]
+- [배열](src/array/README.md)
 
 ## 클래스와 객체
 
