@@ -7,10 +7,18 @@
 ## 반복문
 - [for, while](src/loop/README.md)
 
-## 배열
-- [배열](src/array/README.md)
+## [배열](src/array/README.md)
+- 배열
+- 2차원 배열
+- 래그드 배열
 
-## 객체
+## [객체](src/object/README.md)
+- 객체 지향 프로그래밍이란?
+- 클래스와 객체 만들기
+- 생성자와 메소드 오버로딩
+- 접근 제어
+- 객체의 소멸
+- 정적 멤버
 
 ## 상속
 
