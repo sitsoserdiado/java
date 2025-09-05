@@ -2,7 +2,7 @@
 
 ## 조건문
 - [if-else](src/conditional/ifelse/README.md)
-- [switch](src/conditional/switch/README.md)
+- [switch](src/conditional/switchcase/README.md)
 
 ## 반복문
 - [for, while](src/loop/README.md)
