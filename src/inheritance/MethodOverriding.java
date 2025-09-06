@@ -44,10 +44,10 @@ public class MethodOverriding {
 		t.draw();
 		
 		// static
-		Rectangle r = new Rectangle();
-		Shape s = r;
-		r.A();
-		s.A(); // A()가 정적 메소드가 아니라 동적 메소드였다면 Rectangle에 있는 메소드가 실행됐을 것.
+		@SuppressWarnings("unused") // 컴파일러 경고 무시 어노테이션
+		Shape s = new Rectangle();
+		Rectangle.A();
+		Shape.A(); // A()가 정적 메소드가 아니라 동적 메소드였다면 Rectangle에 있는 메소드가 실행됐을 것.
 	}
 
 }

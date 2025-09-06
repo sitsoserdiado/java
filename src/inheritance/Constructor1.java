@@ -16,7 +16,7 @@ class Derived extends Base {
 public class Constructor1 {
 
 	public static void main(String[] args) {
-		Derived obj = new Derived();
+		new Derived();
 	}
 
 }
