@@ -64,4 +64,71 @@ class Television implements RemoteControl {
 <br><br>
 
 ## 인터페이스를 이용한 다중 상속
-인터페이스끼리도 상속이 가능하다.
+인터페이스끼리도 상속이 가능하다.  
+<br>
+**다중 상속**(Multiple inheritance)은 하나의 클래스가 여러 개의 부모 클래스를 가지는 것이다.  
+다중 상속은 애매모호한 상황을 만들 수 있기 때문에 자바에서는 금지되어 있다.  
+하지만 부모 클래스를 하나만 허용하는 것은 너무 엄격하다. 때에 따라서는 다중 상속이 필요한 것이다.  
+자바에서는 인터페이스를 이용하여서 다중 상속과 비슷한 효과를 낼 수 있다.  
+하나의 클래스로부터 상속을 받으면서 동시에 여러 개의 인터페이스도 구현하면 다중 상속과 비슷해진다.  
+<br>
+첫 번째 방법은 여러 개의 인터페이스를 동시에 구현하는 것이다.
+
+```java
+interface Drivable {
+    void drive();
+}
+
+interface Flyable {
+    void fly();
+}
+
+public class FlyingCar1 implements Drivable, Flyable {
+    public void drive() {
+        System.out.println("driving");
+    }
+    public void fly() {
+        System.out.println("flying");
+    }
+
+    public static void main(String args[]) {
+        FlyingCar1 obj = new FlyingCar1();
+        obj.drive();
+        obj.fly();
+    }
+}
+
+실행 결과:
+        driving
+        flying
+```
+
+두 번째 방법은 하나의 클래스를 상속받고 또 하나의 인터페이스를 구현하는 것이다.
+
+```java
+interface Flyable {
+    void fly();
+}
+
+class Car {
+    int speed;
+    void setSpeed(int speed) {
+        this.speed = speed;
+    }
+}
+
+public class FlyingCar2 extends Car implements Flyable {
+    public void fly() {
+        System.out.println("flying");
+    }
+
+    public static void main(String args[]) {
+        FlyingCar2 obj = new FlyingCar2();
+        obj.setSpeed(300);
+        obj.fly();
+    }
+}
+
+실행 결과:
+        flying
+```
