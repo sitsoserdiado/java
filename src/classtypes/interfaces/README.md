@@ -133,6 +133,8 @@ public class FlyingCar2 extends Car implements Flyable {
         flying
 ```
 
+<br><br>
+
 ## 상수 정의
 인터페이스에는 상수를 정의할 수 있다. 인터페이스에서 정의된 변수는 자동적으로 public static final이 되어서 상수가 된다.
 
@@ -146,3 +148,11 @@ public interface MyConstants {
 ```
 
 MyConstants.EAST와 같이 상수를 참조할 수 있다. 만약 클래스가 MyConstants 인터페이스를 구현한다면 단순히 EAST라고 써주어도 된다.
+
+<br><br>
+
+## 디폴트 메소드
+
+<br><br>
+
+## 정적 메소드
