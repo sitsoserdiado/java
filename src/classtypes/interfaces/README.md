@@ -164,3 +164,20 @@ MyConstants.EAST와 같이 상수를 참조할 수 있다. 만약 클래스가 M
 <br><br>
 
 ## 정적 메소드
+JDK8부터 인터페이스에 정적 메소드를 추가할 수 있다.
+
+```java
+interface MyInterface {
+    static void print(String msg) {
+        System.out.println(msg + ": 인터페이스의 정적 메소드 호출");
+    }
+}
+
+public class StaticMethodTest {
+    public static void main(String[] args) {
+        MyInterface.print("Java 8");
+    }
+}
+
+실행 결과: Java 8: 인터페이스의 정적 메소드 호출
+```
