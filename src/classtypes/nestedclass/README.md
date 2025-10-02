@@ -23,3 +23,8 @@ class OuterClass {
 <br><br>
 
 ## 내부 클래스
+클래스 안에 클래스를 선언하는 경우이다.  
+내부 클래스의 접근 지정자는 public, private, protected 또는 package(default)일 수 있다.  
+내부 클래스는 외부 클래스의 인스턴스 변수와 메소드를 전부 사용할 수 있다.  
+private으로 선언되어 있어도 접근이 가능하다.  
+이것이 내부 클래스의 최대 장점이다.
