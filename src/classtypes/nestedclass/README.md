@@ -28,3 +28,28 @@ class OuterClass {
 내부 클래스는 외부 클래스의 인스턴스 변수와 메소드를 전부 사용할 수 있다.  
 private으로 선언되어 있어도 접근이 가능하다.  
 이것이 내부 클래스의 최대 장점이다.
+
+```java
+class OuterClass {
+    private int value = 10;
+
+    class InnerClass {
+        public void myMethod() {
+            System.out.println("외부 클래스의 private 변수 값: " + value);
+        }
+    } // 이게 내부 클래스. 내부 클래스 안에서는 외부 클래스의 private 변수들을 참조할 수 있다.
+
+    OuterClass() {
+        InnerClass obj = new InnerClass(); // 내부 클래스를 사용한다.
+        obj.myMethod();
+    }
+}
+
+public class InnerClassTest {
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+    }
+}
+
+실행 결과: 외부 클래스의 private 변수 값: 10
+```
