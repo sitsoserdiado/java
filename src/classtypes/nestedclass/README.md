@@ -53,3 +53,5 @@ public class InnerClassTest {
 
 실행 결과: 외부 클래스의 private 변수 값: 10
 ```
+
+## 지역 클래스
