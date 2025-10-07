@@ -55,3 +55,4 @@ public class InnerClassTest {
 ```
 
 ## 지역 클래스
+지역 클래스는 메소드 안에 정의되는 클래스이다.
