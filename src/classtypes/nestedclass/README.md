@@ -58,3 +58,35 @@ public class InnerClassTest {
 지역 클래스는 메소드 안에 정의되는 클래스이다.  
 이 메소드는 접근 제어 지정자를 가질 수 없다.  
 지역 클래스는 abstract 또는 final로만 지정할 수 있다.
+
+```java
+class LocalInner {
+    private int data = 30;
+    void display() {
+        final String msg = "현재의 데이터값은 ";
+
+        class Local {
+        /**
+         * 메소드 display() 안에 클래스 Local이 정의되어 있다.
+         * 지역 클래스는 메소드 안에서만 사용 가능하다.
+         * 외부 클래스의 private 변수에 접근할 수 있다.
+         **/
+            void printMsg() {
+                System.out.println(msg + data);
+            }
+        }
+        
+         Local obj = new Local();
+         obj.printMsg();
+    }
+}
+
+public class LocalInnerTest {
+    public static void main(String args[]) {
+        LocalInner obj = new LocalInner();
+        obj.display();
+    }
+}
+
+실행 결과: 현재의 데이터값은 30
+```
