@@ -102,3 +102,4 @@ public class LocalInnerTest {
 <br><br>
 
 ## 익명 클래스
+클래스 몸체는 정의되지만 이름이 없는 클래스이다.
