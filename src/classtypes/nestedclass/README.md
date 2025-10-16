@@ -106,4 +106,42 @@ public class LocalInnerTest {
 익명 클래스는 클래스를 정의하면서 동시에 객체를 생성하게 된다.  
 이름이 없기 때문에 한 번만 사용이 가능하다.  
 익명 클래스는 부모 클래스에서 상속을 받아서 작성하거나 인터페이스를 구현하여서 작성할 수 있다.  
-new 키워드 다음에 부모 클래스 이름이나 인터페이스 이름을 적어주면 된다.
+new 키워드 다음에 부모 클래스 이름이나 인터페이스 이름을 적어주면 된다.  
+부모 클래스 이름을 적으면 그 부모 클래스에서 상속을 받는다는 의미이고, 인터페이스 이름인 경우에는 그 인터페이스를 구현하는 클래스라는 의미이다.  
+
+```java
+부모클래스 참조변수 = new 부모클래스() {
+    // 클래스 구현
+}
+```
+
+```java
+public interface RemoteControl {
+    void turnOn();
+    void turnOff();
+}
+
+public class AnonymousClassTest {
+    public static void main(String args[]) {
+        RemoteControl ac = new RemoteControl() {
+            public void turnOn() {
+                System.out.println("TV turnOn()");
+            }
+            public void turnOff() {
+                System.out.println("TV turnOff()");
+            }
+        }; // 익명 클래스가 정의되면서 동시에 객체도 생성된다. 그렇기 때문에 세미 콜론을 붙여야 한다.
+        
+        ac.turnOn();
+        ac.turnOff();
+    }
+}
+
+실행 결과:
+TV turnOn()
+TV turnOff()
+```
+
+익명 클래스도 내부 클래스와 같이 필드와 다른 메소드들을 정의할 수 있다.  
+다만 메소드 안에 정의되는 지역 변수 중에서는 Java 7까지는 final로 선언된 변수만 사용 가능하고, Java 8부터는 값이 변경되지 않는 'effectively final' 변수라면 final을 명시하지 않아도 사용이 가능하다.   
+익명 클래스는 주로 그래픽 사용자 인터페이스의 이벤트 처리기를 구현하는 경우에 많이 사용되는데, 이벤트 처리 객체는 하나만 생성되면 되기 때문이다. 구태여 클래스 이름을 붙일 필요가 없는 것이다.
