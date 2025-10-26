@@ -116,3 +116,7 @@ String s = Integer.toString(100); // s는 "100"
 ```java
 int i = Integer.parseInt("100");
 ```
+
+<br><br>
+
+## String 클래스
