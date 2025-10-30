@@ -120,3 +120,4 @@ int i = Integer.parseInt("100");
 <br><br>
 
 ## String 클래스
+자바 API 문서에서 String 클래스를 찾아보면 아주 많은 메소드들이 있다.
